@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/TiffnyBule"
+    android:background="@color/Yellow"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -42,7 +42,7 @@
             android:id="@+id/Diary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="日记"
+            android:text="@string/Diary"
             android:textSize="24dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
@@ -54,7 +54,7 @@
             android:id="@+id/Schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="日程"
+            android:text="@string/Schedule"
             android:textSize="24dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
@@ -63,7 +63,7 @@
             android:id="@+id/BookMarks"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="书签"
+            android:text="@string/BookMarks"
             android:textSize="24dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
@@ -72,16 +72,39 @@
             android:layout_marginEnd="26dp" />
     </RelativeLayout>
 
-    <LinearLayout
+    <TableLayout
         android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        ></LinearLayout>
+        android:layout_height="10dp"
+        android:stretchColumns="1"
+        >
+        <TableRow
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+            <Button
+                android:id="@+id/DiaryBtn"
+                android:background="@color/TiffnyBule"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                android:layout_width="fill_parent"/>
+            <Button
+                android:id="@+id/ScheduleBtn"
+                android:background="@color/Yellow"
+                android:gravity="center"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent" />
+            <Button
+                android:id="@+id/BookMarksBtn"
+                android:background="@color/Yellow"
+                android:gravity="right"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent" />
+        </TableRow>
+    </TableLayout>
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:background="@color/Grey600"
-        android:layout_height="fill_parent"></LinearLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/Grey600"></FrameLayout>
 
 </LinearLayout>
