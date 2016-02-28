@@ -1,6 +1,0 @@
-
-
-
-publci class test() {
-	
-}
